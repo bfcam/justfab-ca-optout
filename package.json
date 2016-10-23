@@ -1,0 +1,22 @@
+{
+  "name": "justfab-ca-optout",
+  "description": "Opts out of the Justfab Canada monthly billing - run in cron once per month between the 1st and 5th of the month",
+  "version": "0.0.1",
+  "author": {
+    "name": "Cameron Lerch"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "repository": {
+    "type" : "git"
+    "url" : "https://github.com/bfcam/justfab-ca-optout"
+  },
+  "dependencies": {
+    "casperjs": "1.1.x",
+    "phantomjs-prebuilt": "2.1.x"
+  }
+}
