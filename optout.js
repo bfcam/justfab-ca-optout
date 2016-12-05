@@ -40,17 +40,25 @@ casper.then(function() {
 });
 
 casper.then(function() {
-    this.waitForSelector('.boutique #hero .skip', function () {
-        this.mouseEvent('click', '.boutique #hero .skip');
+    this.waitForSelector('#hero .popup_skip', function () {
+        this.mouseEvent('click', '#hero .popup_skip');
     }, function() {
         driver.error('Could not find skip this month');
     }, WAIT_TIME);
 });
 
 casper.then(function() {
-    this.waitForSelector('.boutique #hero .skipped', function () {
+    this.waitForSelector('#popup_skip_intro .skip_proceed', function () {
+        this.mouseEvent('click', '#popup_skip_intro .skip_proceed');
     }, function() {
-        driver.error('Skip this month did not succeed');
+        driver.error('Could not find skip proceed button');
+    }, WAIT_TIME);
+});
+
+casper.thenOpen('http://justfab.ca', function() {
+    this.waitForSelector('#hero .popup_skip', function () {
+        driver.error('Skip this month did not succeed!');
+    }, function() {
     }, WAIT_TIME);
 });
 
